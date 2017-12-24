@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scoreboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/linear_margins"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/whtblck_margin"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/side1_name"
+                android:textColor="@color/colorTeam"
+                android:textSize="@dimen/side_size" />
+
+            <TextView
+                android:id="@+id/white_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/score_margin"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/initial_score"
+                android:textColor="@color/colorScore"
+                android:textSize="@dimen/score_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/whtblck_margin"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="@string/side2_name"
+                android:textColor="@color/colorTeam"
+                android:textSize="@dimen/side_size" />
+
+            <TextView
+                android:id="@+id/black_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/score_margin"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/initial_score"
+                android:textColor="@color/colorScore"
+                android:textSize="@dimen/score_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/take_pawn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/linear_height"
+        android:layout_below="@id/scoreboard"
+        android:layout_marginHorizontal="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addOneForWhite"
+            android:text="+ 1"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:src="@drawable/pawn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addOneForBlack"
+            android:text="+ 1"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_knight"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/linear_height"
+        android:layout_below="@id/take_pawn"
+        android:layout_marginHorizontal="@dimen/linear_margins"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addThreeForWhite"
+            android:text="+ 3"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:src="@drawable/knight" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addThreeForBlack"
+            android:text="+ 3"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_bishop"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/linear_height"
+        android:layout_below="@id/take_knight"
+        android:layout_marginHorizontal="@dimen/linear_margins"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addThreeForWhite"
+            android:text="+ 3"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:src="@drawable/bishop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addThreeForBlack"
+            android:text="+ 3"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_rook"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/take_bishop"
+        android:layout_marginHorizontal="@dimen/linear_margins"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addFiveForWhite"
+            android:text="+ 5"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:src="@drawable/rook" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addFiveForBlack"
+            android:text="+ 5"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_queen"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/linear_height"
+        android:layout_below="@id/take_rook"
+        android:layout_marginHorizontal="@dimen/linear_margins"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addNineForWhite"
+            android:text="+ 9"
+            android:textColor="@android:color/white" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1.5"
+            android:src="@drawable/queen" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="addNineForBlack"
+            android:text="+ 9"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/reset_margin"
+        android:onClick="resetScore"
+        android:text="@string/reset_score"
+        android:textColor="@android:color/white" />
+</RelativeLayout>

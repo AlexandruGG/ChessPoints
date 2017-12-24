@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="score_size">56sp</dimen>
+    <dimen name="button_size">10sp</dimen>
+    <dimen name="score_margin">16dp</dimen>
+    <dimen name="whtblck_margin">16dp</dimen>
+    <dimen name="side_size">14sp</dimen>
+    <dimen name="reset_margin">8dp</dimen>
+    <dimen name="linear_margins">12dp</dimen>
+    <dimen name="land_linear">24dp</dimen>
+    <dimen name="linear_height">50dp</dimen>
+    <dimen name="linear_width">100dp</dimen>
+    <dimen name="piece_size">40dp</dimen>
+    <dimen name="land_score">80dp</dimen>
+
+</resources>

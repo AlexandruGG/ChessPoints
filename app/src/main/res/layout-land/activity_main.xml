@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/scoreboard"
+        android:layout_width="@dimen/land_score"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/linear_margins"
+        android:layout_marginLeft="@dimen/land_linear"
+        android:layout_marginRight="@dimen/land_linear"
+        android:layout_marginTop="@dimen/linear_margins"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/side1_name"
+                android:textColor="@color/colorTeam"
+                android:textSize="@dimen/side_size" />
+
+            <TextView
+                android:id="@+id/white_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/initial_score"
+                android:textColor="@color/colorScore"
+                android:textSize="@dimen/score_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/linear_margins"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_horizontal"
+                android:text="@string/side2_name"
+                android:textColor="@color/colorTeam"
+                android:textSize="@dimen/side_size" />
+
+            <TextView
+                android:id="@+id/black_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal"
+                android:text="@string/initial_score"
+                android:textColor="@color/colorScore"
+                android:textSize="@dimen/score_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_pawn"
+        android:layout_width="@dimen/linear_height"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/linear_margins"
+        android:layout_toEndOf="@id/scoreboard"
+        android:layout_toRightOf="@id/scoreboard"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addOneForWhite"
+            android:text="+ 1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/pawn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addOneForBlack"
+            android:text="+ 1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_knight"
+        android:layout_width="@dimen/linear_height"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/land_linear"
+        android:layout_marginVertical="@dimen/linear_margins"
+        android:layout_toEndOf="@id/take_pawn"
+        android:layout_toRightOf="@id/take_pawn"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addThreeForWhite"
+            android:text="+ 3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/knight" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addThreeForBlack"
+            android:text="+ 3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_bishop"
+        android:layout_width="@dimen/linear_height"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/land_linear"
+        android:layout_marginVertical="@dimen/linear_margins"
+        android:layout_toEndOf="@id/take_knight"
+        android:layout_toRightOf="@id/take_knight"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addThreeForWhite"
+            android:text="+ 3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/bishop" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addThreeForBlack"
+            android:text="+ 3"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_rook"
+        android:layout_width="@dimen/linear_height"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/land_linear"
+        android:layout_marginVertical="@dimen/linear_margins"
+        android:layout_toEndOf="@id/take_bishop"
+        android:layout_toRightOf="@id/take_bishop"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addFiveForWhite"
+            android:text="+ 5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/rook" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addFiveForBlack"
+            android:text="+ 5"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_queen"
+        android:layout_width="@dimen/linear_height"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/land_linear"
+        android:layout_marginVertical="@dimen/linear_margins"
+        android:layout_toEndOf="@id/take_rook"
+        android:layout_toRightOf="@id/take_rook"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addNineForWhite"
+            android:text="+ 9"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+
+        <ImageView
+            android:layout_width="@dimen/piece_size"
+            android:layout_height="@dimen/piece_size"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/queen" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="addNineForBlack"
+            android:text="+ 9"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/button_size" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/reset_margin"
+        android:onClick="resetScore"
+        android:text="@string/reset_score"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
