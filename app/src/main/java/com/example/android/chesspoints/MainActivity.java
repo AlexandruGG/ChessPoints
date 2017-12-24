@@ -11,12 +11,32 @@ public class MainActivity extends AppCompatActivity {
 
     int scoreWhite = 0;
     int scoreBlack = 0;
+    static final String savedWhite = "scoreWhite";
+    static final String savedBlack = "scoreBlack";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState){
+        savedInstanceState.putInt(savedWhite, scoreWhite);
+        savedInstanceState.putInt(savedBlack, scoreBlack);
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState){
+        super.onRestoreInstanceState(savedInstanceState);
+
+        scoreWhite = savedInstanceState.getInt(savedWhite);
+        scoreBlack = savedInstanceState.getInt(savedBlack);
+
+        displayForWhite(scoreWhite);
+        displayForBlack(scoreBlack);
     }
 
     /**

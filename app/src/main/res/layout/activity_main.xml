@@ -90,7 +90,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addOneForWhite"
-            android:text="+ 1"
+            android:text="@string/add_1"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -105,7 +105,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addOneForBlack"
-            android:text="+ 1"
+            android:text="@string/add_1"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -123,7 +123,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addThreeForWhite"
-            android:text="+ 3"
+            android:text="@string/add_3"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -138,7 +138,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addThreeForBlack"
-            android:text="+ 3"
+            android:text="@string/add_3"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -156,7 +156,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addThreeForWhite"
-            android:text="+ 3"
+            android:text="@string/add_3"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -171,7 +171,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addThreeForBlack"
-            android:text="+ 3"
+            android:text="@string/add_3"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -189,7 +189,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addFiveForWhite"
-            android:text="+ 5"
+            android:text="@string/add_5"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -204,7 +204,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addFiveForBlack"
-            android:text="+ 5"
+            android:text="@string/add_5"
             android:textColor="@android:color/white" />
     </LinearLayout>
 
@@ -222,7 +222,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addNineForWhite"
-            android:text="+ 9"
+            android:text="@string/add_9"
             android:textColor="@android:color/white" />
 
         <ImageView
@@ -237,7 +237,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="addNineForBlack"
-            android:text="+ 9"
+            android:text="@string/add_9"
             android:textColor="@android:color/white" />
     </LinearLayout>
 

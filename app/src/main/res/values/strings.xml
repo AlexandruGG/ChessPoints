@@ -5,4 +5,8 @@
     <string name="initial_score">0</string>
     <string name="reset_score">Reset</string>
     <string name="take_piece">Capture</string>
+    <string name="add_1">+ 1</string>
+    <string name="add_3">+ 3</string>
+    <string name="add_5">+ 5</string>
+    <string name="add_9">+ 9</string>
 </resources>
