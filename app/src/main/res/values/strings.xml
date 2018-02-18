@@ -4,6 +4,7 @@
     <string name="side2_name">Black</string>
     <string name="initial_score">0</string>
     <string name="reset_score">Reset</string>
+    <string name="reset_land">R\nE\nS\nE\nT</string>
     <string name="take_piece">Capture</string>
     <string name="add_1">+ 1</string>
     <string name="add_3">+ 3</string>

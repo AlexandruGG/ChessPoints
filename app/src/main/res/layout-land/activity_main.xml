@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/scoreboard"
@@ -14,6 +13,7 @@
         android:layout_marginLeft="@dimen/land_linear"
         android:layout_marginRight="@dimen/land_linear"
         android:layout_marginTop="@dimen/linear_margins"
+        android:layout_weight="6"
         android:orientation="vertical">
 
         <LinearLayout
@@ -84,8 +84,7 @@
         android:layout_width="@dimen/linear_height"
         android:layout_height="match_parent"
         android:layout_marginVertical="@dimen/linear_margins"
-        android:layout_toEndOf="@id/scoreboard"
-        android:layout_toRightOf="@id/scoreboard"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <Button
@@ -120,8 +119,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/land_linear"
         android:layout_marginVertical="@dimen/linear_margins"
-        android:layout_toEndOf="@id/take_pawn"
-        android:layout_toRightOf="@id/take_pawn"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <Button
@@ -156,8 +154,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/land_linear"
         android:layout_marginVertical="@dimen/linear_margins"
-        android:layout_toEndOf="@id/take_knight"
-        android:layout_toRightOf="@id/take_knight"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <Button
@@ -192,8 +189,8 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/land_linear"
         android:layout_marginVertical="@dimen/linear_margins"
-        android:layout_toEndOf="@id/take_bishop"
-        android:layout_toRightOf="@id/take_bishop"
+        android:layout_weight="1"
+
         android:orientation="vertical">
 
         <Button
@@ -228,8 +225,7 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/land_linear"
         android:layout_marginVertical="@dimen/linear_margins"
-        android:layout_toEndOf="@id/take_rook"
-        android:layout_toRightOf="@id/take_rook"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <Button
@@ -259,12 +255,12 @@
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/reset_land_width"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
+        android:layout_gravity="center"
         android:layout_margin="@dimen/reset_margin"
+        android:layout_weight="2"
         android:onClick="resetScore"
-        android:text="@string/reset_score"
+        android:text="@string/reset_land"
         android:textColor="@android:color/white" />
-</RelativeLayout>
+</LinearLayout>

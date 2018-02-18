@@ -12,5 +12,5 @@
     <dimen name="linear_width">100dp</dimen>
     <dimen name="piece_size">40dp</dimen>
     <dimen name="land_score">80dp</dimen>
-
+    <dimen name="reset_land_width">30dp</dimen>
 </resources>
