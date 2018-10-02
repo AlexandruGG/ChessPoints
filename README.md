@@ -1,3 +1,4 @@
 # ChessPoints
-This app allows the user to keep track of the point value of captured pieces in a game of chess.
-The project was created using Android Studio as part of the Udacity Android Basics course.
+Use: Allows users to keep track of the total point value of captured pieces in a game of chess.
+Developing Purpose: Practising simple nested layouts, displaying data dynamically in a TextView, and dealing with button presses.
+Context: Project created as part of the Udacity Android Basics Nanodegree (https://eu.udacity.com/course/android-basics-nanodegree-by-google--nd803)
